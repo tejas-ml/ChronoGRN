@@ -1,0 +1,1436 @@
+{
+  "design": {
+    "independent_unit": "simulated network seed",
+    "n_seeds": 16,
+    "paired_variants": [
+      "ChronoGRN",
+      "No delay",
+      "No gate",
+      "Fixed W"
+    ],
+    "heldout_data_used_for_fitting": false,
+    "time_frequencies": 1
+  },
+  "fit_config": {
+    "smooth_window": 11,
+    "smooth_polynomial": 3,
+    "target_delay_candidates": 31,
+    "coordinate_passes": 2,
+    "ridge": 0.002,
+    "delay_response_weight": 0.0,
+    "delay_control_difference_weight": 0.0,
+    "coefficient_response_weight": 0.0,
+    "initialize_access_delays": true,
+    "access_smooth_window": 13,
+    "access_profile_candidates": 59,
+    "access_profile_frequencies": 1,
+    "access_forcing_penalty": 10.0,
+    "finetune_epochs": 0,
+    "learning_rate": 0.002,
+    "weight_decay": 1e-05,
+    "edge_group_l1": 0.001,
+    "dynamic_l2": 5e-05,
+    "target_forcing_l2": 0.01,
+    "response_derivative_weight": 0.2,
+    "rollout_weight": 0.25,
+    "response_weight": 0.4,
+    "rollout_start_epoch": 2,
+    "response_start_epoch": 2,
+    "rollout_every": 2,
+    "auxiliary_trajectory_batch": 5,
+    "auxiliary_response_batch": 4,
+    "patience": 25,
+    "seed": 31,
+    "freeze_access_delays": true,
+    "freeze_target_delays": true
+  },
+  "summary": {
+    "variants": {
+      "ChronoGRN": {
+        "edge_auprc": {
+          "mean": 0.9371003401824312,
+          "sd": 0.05470643409010791
+        },
+        "dynamic_component_r": {
+          "mean": 0.9584298655390739,
+          "sd": 0.01769727716828548
+        },
+        "control_target_r2": {
+          "mean": 0.9351427626128945,
+          "sd": 0.016940030190330378
+        },
+        "late_horizon_reconstruction_r2": {
+          "mean": 0.8906054831002124,
+          "sd": 0.023256906539602138
+        },
+        "heldout_perturbation_r": {
+          "mean": 0.9402238167822361,
+          "sd": 0.022217674486557044
+        },
+        "heldout_response_trajectory_r": {
+          "mean": 0.7020652834326029,
+          "sd": 0.0858778816972766
+        },
+        "heldout_target_rollout_r2": {
+          "mean": 0.8548629484953094,
+          "sd": 0.03889377208726729
+        },
+        "heldout_sign_accuracy_effectful_targets": {
+          "mean": 0.9680803571428571,
+          "sd": 0.04263438304835467
+        },
+        "stage_early_response_r_weighted": {
+          "mean": 0.9156134365167234,
+          "sd": 0.029209753541955607
+        },
+        "stage_mid_response_r_weighted": {
+          "mean": 0.9005407171239548,
+          "sd": 0.035851926566702656
+        },
+        "stage_late_response_r_weighted": {
+          "mean": 0.7183413632165967,
+          "sd": 0.09397160068660901
+        }
+      },
+      "No delay": {
+        "edge_auprc": {
+          "mean": 0.9009640136177892,
+          "sd": 0.07197731843539797
+        },
+        "dynamic_component_r": {
+          "mean": 0.9134698696434498,
+          "sd": 0.034698003216477896
+        },
+        "control_target_r2": {
+          "mean": 0.9209643655662162,
+          "sd": 0.022758728848388015
+        },
+        "late_horizon_reconstruction_r2": {
+          "mean": 0.8525377444431831,
+          "sd": 0.0414400904682361
+        },
+        "heldout_perturbation_r": {
+          "mean": 0.8787862248718739,
+          "sd": 0.0626930616356167
+        },
+        "heldout_response_trajectory_r": {
+          "mean": 0.6533429566770792,
+          "sd": 0.09979318749881148
+        },
+        "heldout_target_rollout_r2": {
+          "mean": 0.7795761641599437,
+          "sd": 0.05839645681318188
+        },
+        "heldout_sign_accuracy_effectful_targets": {
+          "mean": 0.9479724702380952,
+          "sd": 0.08590677919255651
+        },
+        "stage_early_response_r_weighted": {
+          "mean": 0.8802502706360774,
+          "sd": 0.07843556563540142
+        },
+        "stage_mid_response_r_weighted": {
+          "mean": 0.8200792518124971,
+          "sd": 0.05750519284089721
+        },
+        "stage_late_response_r_weighted": {
+          "mean": 0.6144096601814135,
+          "sd": 0.08691386189367772
+        }
+      },
+      "No gate": {
+        "edge_auprc": {
+          "mean": 0.9538752256825025,
+          "sd": 0.03299370907198993
+        },
+        "dynamic_component_r": {
+          "mean": 0.8826259113848209,
+          "sd": 0.01365168526297085
+        },
+        "control_target_r2": {
+          "mean": 0.934714581486614,
+          "sd": 0.017087143718315035
+        },
+        "late_horizon_reconstruction_r2": {
+          "mean": 0.8906062792658122,
+          "sd": 0.023390058310841042
+        },
+        "heldout_perturbation_r": {
+          "mean": 0.9116255901753902,
+          "sd": 0.03430835835571831
+        },
+        "heldout_response_trajectory_r": {
+          "mean": 0.6793524660170078,
+          "sd": 0.08093431918413527
+        },
+        "heldout_target_rollout_r2": {
+          "mean": 0.8388728890100907,
+          "sd": 0.04587710502790123
+        },
+        "heldout_sign_accuracy_effectful_targets": {
+          "mean": 0.9662946428571428,
+          "sd": 0.04385246073537084
+        },
+        "stage_early_response_r_weighted": {
+          "mean": 0.8894202828237812,
+          "sd": 0.035407540644972736
+        },
+        "stage_mid_response_r_weighted": {
+          "mean": 0.8907398643049688,
+          "sd": 0.040794294672771486
+        },
+        "stage_late_response_r_weighted": {
+          "mean": 0.7108080006446964,
+          "sd": 0.11001721671037881
+        }
+      },
+      "Fixed W": {
+        "edge_auprc": {
+          "mean": 0.7013390676327736,
+          "sd": 0.05897377506332656
+        },
+        "dynamic_component_r": {
+          "mean": -9.255018085241318e-09,
+          "sd": 2.1691270520500507e-08
+        },
+        "control_target_r2": {
+          "mean": 0.7166272480550355,
+          "sd": 0.23212863436577358
+        },
+        "late_horizon_reconstruction_r2": {
+          "mean": 0.4415027897209464,
+          "sd": 0.6474632786402603
+        },
+        "heldout_perturbation_r": {
+          "mean": 0.40244789654389024,
+          "sd": 0.2438502229489278
+        },
+        "heldout_response_trajectory_r": {
+          "mean": 0.2828570497513283,
+          "sd": 0.16263582800731716
+        },
+        "heldout_target_rollout_r2": {
+          "mean": 0.24667302814249012,
+          "sd": 0.4905420090006891
+        },
+        "heldout_sign_accuracy_effectful_targets": {
+          "mean": 0.7753224206349206,
+          "sd": 0.1473401863960097
+        },
+        "stage_early_response_r_weighted": {
+          "mean": 0.43890909222376634,
+          "sd": 0.2542062830222726
+        },
+        "stage_mid_response_r_weighted": {
+          "mean": 0.5167372567636485,
+          "sd": 0.28170983352264356
+        },
+        "stage_late_response_r_weighted": {
+          "mean": 0.4105416259945099,
+          "sd": 0.24666476897216644
+        }
+      }
+    },
+    "paired": {
+      "No delay": {
+        "edge_auprc": {
+          "mean_full_minus_ablation": 0.03613632656464205,
+          "sd": 0.0725071133538541,
+          "wins": 12,
+          "ties": 0,
+          "n": 16
+        },
+        "dynamic_component_r": {
+          "mean_full_minus_ablation": 0.04495999589562416,
+          "sd": 0.024860115070905502,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "control_target_r2": {
+          "mean_full_minus_ablation": 0.014178397046678275,
+          "sd": 0.012452888765518477,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "late_horizon_reconstruction_r2": {
+          "mean_full_minus_ablation": 0.038067738657029136,
+          "sd": 0.032504915054649745,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_perturbation_r": {
+          "mean_full_minus_ablation": 0.061437591910362244,
+          "sd": 0.056934375986900806,
+          "wins": 15,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_response_trajectory_r": {
+          "mean_full_minus_ablation": 0.04872232675552368,
+          "sd": 0.04401289315823901,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_target_rollout_r2": {
+          "mean_full_minus_ablation": 0.07528678433536568,
+          "sd": 0.03763724383550953,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_sign_accuracy_effectful_targets": {
+          "mean_full_minus_ablation": 0.020107886904761903,
+          "sd": 0.07920998999196152,
+          "wins": 5,
+          "ties": 6,
+          "n": 16
+        },
+        "stage_early_response_r_weighted": {
+          "mean_full_minus_ablation": 0.03536316588064595,
+          "sd": 0.07091335774321106,
+          "wins": 11,
+          "ties": 0,
+          "n": 16
+        },
+        "stage_mid_response_r_weighted": {
+          "mean_full_minus_ablation": 0.0804614653114577,
+          "sd": 0.05876767137488904,
+          "wins": 15,
+          "ties": 0,
+          "n": 16
+        },
+        "stage_late_response_r_weighted": {
+          "mean_full_minus_ablation": 0.10393170303518315,
+          "sd": 0.08176469103949094,
+          "wins": 13,
+          "ties": 0,
+          "n": 16
+        }
+      },
+      "No gate": {
+        "edge_auprc": {
+          "mean_full_minus_ablation": -0.01677488550007141,
+          "sd": 0.04390725525299052,
+          "wins": 7,
+          "ties": 0,
+          "n": 16
+        },
+        "dynamic_component_r": {
+          "mean_full_minus_ablation": 0.075803954154253,
+          "sd": 0.0209270173628042,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "control_target_r2": {
+          "mean_full_minus_ablation": 0.00042818112628046495,
+          "sd": 0.0012630676049095776,
+          "wins": 10,
+          "ties": 0,
+          "n": 16
+        },
+        "late_horizon_reconstruction_r2": {
+          "mean_full_minus_ablation": -7.961655999200179e-07,
+          "sd": 0.00329757497136609,
+          "wins": 8,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_perturbation_r": {
+          "mean_full_minus_ablation": 0.028598226606845856,
+          "sd": 0.019877028315110953,
+          "wins": 15,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_response_trajectory_r": {
+          "mean_full_minus_ablation": 0.022712817415595055,
+          "sd": 0.016909408386996557,
+          "wins": 15,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_target_rollout_r2": {
+          "mean_full_minus_ablation": 0.0159900594852187,
+          "sd": 0.016833279106051327,
+          "wins": 15,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_sign_accuracy_effectful_targets": {
+          "mean_full_minus_ablation": 0.0017857142857142794,
+          "sd": 0.02246606578524531,
+          "wins": 3,
+          "ties": 12,
+          "n": 16
+        },
+        "stage_early_response_r_weighted": {
+          "mean_full_minus_ablation": 0.026193153692942242,
+          "sd": 0.019848514060529166,
+          "wins": 13,
+          "ties": 0,
+          "n": 16
+        },
+        "stage_mid_response_r_weighted": {
+          "mean_full_minus_ablation": 0.00980085281898612,
+          "sd": 0.017162488737758122,
+          "wins": 12,
+          "ties": 0,
+          "n": 16
+        },
+        "stage_late_response_r_weighted": {
+          "mean_full_minus_ablation": 0.007533362571900317,
+          "sd": 0.04679405873798376,
+          "wins": 9,
+          "ties": 0,
+          "n": 16
+        }
+      },
+      "Fixed W": {
+        "edge_auprc": {
+          "mean_full_minus_ablation": 0.23576127254965754,
+          "sd": 0.0783640793200613,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "dynamic_component_r": {
+          "mean_full_minus_ablation": 0.958429874794092,
+          "sd": 0.017697268150459983,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "control_target_r2": {
+          "mean_full_minus_ablation": 0.21851551455785903,
+          "sd": 0.237307466851571,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "late_horizon_reconstruction_r2": {
+          "mean_full_minus_ablation": 0.4491026933792659,
+          "sd": 0.6529178162574699,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_perturbation_r": {
+          "mean_full_minus_ablation": 0.5377759202383459,
+          "sd": 0.2389042557472502,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_response_trajectory_r": {
+          "mean_full_minus_ablation": 0.4192082336812746,
+          "sd": 0.18549283409518932,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_target_rollout_r2": {
+          "mean_full_minus_ablation": 0.6081899203528194,
+          "sd": 0.4880904950818732,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "heldout_sign_accuracy_effectful_targets": {
+          "mean_full_minus_ablation": 0.1927579365079365,
+          "sd": 0.14847120271207298,
+          "wins": 15,
+          "ties": 1,
+          "n": 16
+        },
+        "stage_early_response_r_weighted": {
+          "mean_full_minus_ablation": 0.476704344292957,
+          "sd": 0.25204154952029334,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "stage_mid_response_r_weighted": {
+          "mean_full_minus_ablation": 0.3838034603603063,
+          "sd": 0.27559658811433174,
+          "wins": 16,
+          "ties": 0,
+          "n": 16
+        },
+        "stage_late_response_r_weighted": {
+          "mean_full_minus_ablation": 0.3077997372220868,
+          "sd": 0.26691685952215605,
+          "wins": 15,
+          "ties": 0,
+          "n": 16
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "seed": 0,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9471908639583906,
+      "dynamic_component_r": 0.9533482193946838,
+      "control_target_r2": 0.948636603733679,
+      "late_horizon_reconstruction_r2": 0.9044447004252201,
+      "heldout_perturbation_r": 0.9523305296897888,
+      "heldout_response_trajectory_r": 0.7328231930732727,
+      "heldout_target_rollout_r2": 0.8925252113735378,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9417420968279944,
+      "stage_mid_response_r_weighted": 0.8629624760796205,
+      "stage_late_response_r_weighted": 0.7178404793387932
+    },
+    {
+      "seed": 0,
+      "variant": "No delay",
+      "edge_auprc": 0.9328623718898702,
+      "dynamic_component_r": 0.9254405498504639,
+      "control_target_r2": 0.9249821237335927,
+      "late_horizon_reconstruction_r2": 0.8398428128781907,
+      "heldout_perturbation_r": 0.8975024223327637,
+      "heldout_response_trajectory_r": 0.6701545715332031,
+      "heldout_target_rollout_r2": 0.841364038188493,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9100198783436155,
+      "stage_mid_response_r_weighted": 0.8750179825276493,
+      "stage_late_response_r_weighted": 0.6245320998945082
+    },
+    {
+      "seed": 0,
+      "variant": "No gate",
+      "edge_auprc": 0.9442388766750965,
+      "dynamic_component_r": 0.8760898113250732,
+      "control_target_r2": 0.9480211086776796,
+      "late_horizon_reconstruction_r2": 0.9027343795085774,
+      "heldout_perturbation_r": 0.9193404316902161,
+      "heldout_response_trajectory_r": 0.7066702842712402,
+      "heldout_target_rollout_r2": 0.88076147264181,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9075396797448193,
+      "stage_mid_response_r_weighted": 0.8742907799236593,
+      "stage_late_response_r_weighted": 0.8093728962058869
+    },
+    {
+      "seed": 0,
+      "variant": "Fixed W",
+      "edge_auprc": 0.6516327633389902,
+      "dynamic_component_r": 1.862645149230957e-08,
+      "control_target_r2": 0.8529877779290216,
+      "late_horizon_reconstruction_r2": 0.7785893810204434,
+      "heldout_perturbation_r": 0.2908962368965149,
+      "heldout_response_trajectory_r": 0.23126178979873657,
+      "heldout_target_rollout_r2": 0.42987578117470193,
+      "heldout_sign_accuracy_effectful_targets": 0.6646825396825397,
+      "stage_early_response_r_weighted": 0.28989616086921455,
+      "stage_mid_response_r_weighted": 0.3640312431224719,
+      "stage_late_response_r_weighted": 0.2003453297770734
+    },
+    {
+      "seed": 1,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9398471602210848,
+      "dynamic_component_r": 0.9695091247558594,
+      "control_target_r2": 0.903886461921042,
+      "late_horizon_reconstruction_r2": 0.8691031531889855,
+      "heldout_perturbation_r": 0.957791268825531,
+      "heldout_response_trajectory_r": 0.7488763928413391,
+      "heldout_target_rollout_r2": 0.7656494342794498,
+      "heldout_sign_accuracy_effectful_targets": 0.9583333333333334,
+      "stage_early_response_r_weighted": 0.9346921331515116,
+      "stage_mid_response_r_weighted": 0.9292670376260639,
+      "stage_late_response_r_weighted": 0.7413702572369818
+    },
+    {
+      "seed": 1,
+      "variant": "No delay",
+      "edge_auprc": 0.9337623751164984,
+      "dynamic_component_r": 0.9343810081481934,
+      "control_target_r2": 0.8867270935749506,
+      "late_horizon_reconstruction_r2": 0.8292939007994868,
+      "heldout_perturbation_r": 0.9410653114318848,
+      "heldout_response_trajectory_r": 0.7358307242393494,
+      "heldout_target_rollout_r2": 0.70093370929709,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9552865598361001,
+      "stage_mid_response_r_weighted": 0.8970715195233243,
+      "stage_late_response_r_weighted": 0.6620733961687723
+    },
+    {
+      "seed": 1,
+      "variant": "No gate",
+      "edge_auprc": 0.9743554500751402,
+      "dynamic_component_r": 0.8735593557357788,
+      "control_target_r2": 0.9021488212019678,
+      "late_horizon_reconstruction_r2": 0.8670187610351853,
+      "heldout_perturbation_r": 0.926660418510437,
+      "heldout_response_trajectory_r": 0.7213423848152161,
+      "heldout_target_rollout_r2": 0.7410998631758198,
+      "heldout_sign_accuracy_effectful_targets": 0.9166666666666666,
+      "stage_early_response_r_weighted": 0.9156145595789549,
+      "stage_mid_response_r_weighted": 0.9146403196868987,
+      "stage_late_response_r_weighted": 0.7061701318833867
+    },
+    {
+      "seed": 1,
+      "variant": "Fixed W",
+      "edge_auprc": 0.7668553488124892,
+      "dynamic_component_r": -3.3527612686157227e-08,
+      "control_target_r2": 0.7533920221818691,
+      "late_horizon_reconstruction_r2": 0.6601740591806822,
+      "heldout_perturbation_r": 0.4429090917110443,
+      "heldout_response_trajectory_r": 0.31300032138824463,
+      "heldout_target_rollout_r2": 0.133523823620325,
+      "heldout_sign_accuracy_effectful_targets": 0.8333333333333334,
+      "stage_early_response_r_weighted": 0.43626239680509665,
+      "stage_mid_response_r_weighted": 0.7536567417647545,
+      "stage_late_response_r_weighted": 0.6820010971013625
+    },
+    {
+      "seed": 2,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9850430731045414,
+      "dynamic_component_r": 0.9736784100532532,
+      "control_target_r2": 0.9249267602110606,
+      "late_horizon_reconstruction_r2": 0.8713150234491795,
+      "heldout_perturbation_r": 0.9499065279960632,
+      "heldout_response_trajectory_r": 0.6710376739501953,
+      "heldout_target_rollout_r2": 0.8418039554482233,
+      "heldout_sign_accuracy_effectful_targets": 0.9333333333333332,
+      "stage_early_response_r_weighted": 0.9042814947947688,
+      "stage_mid_response_r_weighted": 0.9014229014171631,
+      "stage_late_response_r_weighted": 0.7096286561191298
+    },
+    {
+      "seed": 2,
+      "variant": "No delay",
+      "edge_auprc": 0.9779681744960727,
+      "dynamic_component_r": 0.9235947728157043,
+      "control_target_r2": 0.891214095755879,
+      "late_horizon_reconstruction_r2": 0.7748631477352089,
+      "heldout_perturbation_r": 0.8835574388504028,
+      "heldout_response_trajectory_r": 0.6118323802947998,
+      "heldout_target_rollout_r2": 0.7529436953852577,
+      "heldout_sign_accuracy_effectful_targets": 0.95,
+      "stage_early_response_r_weighted": 0.883213766199157,
+      "stage_mid_response_r_weighted": 0.8657336059635804,
+      "stage_late_response_r_weighted": 0.710540477639659
+    },
+    {
+      "seed": 2,
+      "variant": "No gate",
+      "edge_auprc": 0.9755339199718105,
+      "dynamic_component_r": 0.8865375518798828,
+      "control_target_r2": 0.924952596767587,
+      "late_horizon_reconstruction_r2": 0.8721262765516844,
+      "heldout_perturbation_r": 0.9200955033302307,
+      "heldout_response_trajectory_r": 0.6481701731681824,
+      "heldout_target_rollout_r2": 0.8227425446103851,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.911960495390941,
+      "stage_mid_response_r_weighted": 0.8753234502142536,
+      "stage_late_response_r_weighted": 0.757577029652816
+    },
+    {
+      "seed": 2,
+      "variant": "Fixed W",
+      "edge_auprc": 0.7184482817894382,
+      "dynamic_component_r": -1.862645149230957e-08,
+      "control_target_r2": 0.7876130330792134,
+      "late_horizon_reconstruction_r2": 0.6259961206898832,
+      "heldout_perturbation_r": 0.707930862903595,
+      "heldout_response_trajectory_r": 0.4723180830478668,
+      "heldout_target_rollout_r2": 0.6032912998057046,
+      "heldout_sign_accuracy_effectful_targets": 0.9333333333333332,
+      "stage_early_response_r_weighted": 0.6214909928450363,
+      "stage_mid_response_r_weighted": 0.7989258488505951,
+      "stage_late_response_r_weighted": 0.6983693522224201
+    },
+    {
+      "seed": 3,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9571389701559038,
+      "dynamic_component_r": 0.978843092918396,
+      "control_target_r2": 0.9412931554028021,
+      "late_horizon_reconstruction_r2": 0.8901811172224116,
+      "heldout_perturbation_r": 0.9230566024780273,
+      "heldout_response_trajectory_r": 0.6595489382743835,
+      "heldout_target_rollout_r2": 0.8689575987540933,
+      "heldout_sign_accuracy_effectful_targets": 0.95,
+      "stage_early_response_r_weighted": 0.8747013648210268,
+      "stage_mid_response_r_weighted": 0.8770951311027371,
+      "stage_late_response_r_weighted": 0.6918417669719599
+    },
+    {
+      "seed": 3,
+      "variant": "No delay",
+      "edge_auprc": 0.9460712091558673,
+      "dynamic_component_r": 0.9490751028060913,
+      "control_target_r2": 0.9364282848532743,
+      "late_horizon_reconstruction_r2": 0.8783705910384545,
+      "heldout_perturbation_r": 0.6764659881591797,
+      "heldout_response_trajectory_r": 0.4726983904838562,
+      "heldout_target_rollout_r2": 0.7263000481592412,
+      "heldout_sign_accuracy_effectful_targets": 0.8928571428571429,
+      "stage_early_response_r_weighted": 0.609611549018462,
+      "stage_mid_response_r_weighted": 0.6756380491954719,
+      "stage_late_response_r_weighted": 0.44073271298652467
+    },
+    {
+      "seed": 3,
+      "variant": "No gate",
+      "edge_auprc": 0.9824887996134126,
+      "dynamic_component_r": 0.8798363208770752,
+      "control_target_r2": 0.9403316986055906,
+      "late_horizon_reconstruction_r2": 0.890601198904291,
+      "heldout_perturbation_r": 0.8641709685325623,
+      "heldout_response_trajectory_r": 0.6179454922676086,
+      "heldout_target_rollout_r2": 0.8553241945140693,
+      "heldout_sign_accuracy_effectful_targets": 0.95,
+      "stage_early_response_r_weighted": 0.8262752682062635,
+      "stage_mid_response_r_weighted": 0.8628975384982733,
+      "stage_late_response_r_weighted": 0.5962463307335102
+    },
+    {
+      "seed": 3,
+      "variant": "Fixed W",
+      "edge_auprc": 0.7238440933066617,
+      "dynamic_component_r": -7.450580596923828e-09,
+      "control_target_r2": 0.6533982156354773,
+      "late_horizon_reconstruction_r2": 0.25729636433024416,
+      "heldout_perturbation_r": -0.0494641475379467,
+      "heldout_response_trajectory_r": -0.031660355627536774,
+      "heldout_target_rollout_r2": 0.09238662972782485,
+      "heldout_sign_accuracy_effectful_targets": 0.47857142857142854,
+      "stage_early_response_r_weighted": -0.04426286293659998,
+      "stage_mid_response_r_weighted": -0.04263270390153773,
+      "stage_late_response_r_weighted": -0.120172124436342
+    },
+    {
+      "seed": 4,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9263188902229363,
+      "dynamic_component_r": 0.951657772064209,
+      "control_target_r2": 0.9633803722791905,
+      "late_horizon_reconstruction_r2": 0.9356020407196463,
+      "heldout_perturbation_r": 0.9472332000732422,
+      "heldout_response_trajectory_r": 0.826167643070221,
+      "heldout_target_rollout_r2": 0.902813553041295,
+      "heldout_sign_accuracy_effectful_targets": 0.975,
+      "stage_early_response_r_weighted": 0.9389043898225913,
+      "stage_mid_response_r_weighted": 0.9386989545242757,
+      "stage_late_response_r_weighted": 0.8273791680056289
+    },
+    {
+      "seed": 4,
+      "variant": "No delay",
+      "edge_auprc": 0.8293097222372373,
+      "dynamic_component_r": 0.9141284227371216,
+      "control_target_r2": 0.9551505152260777,
+      "late_horizon_reconstruction_r2": 0.9123773930323678,
+      "heldout_perturbation_r": 0.8931320309638977,
+      "heldout_response_trajectory_r": 0.7957811951637268,
+      "heldout_target_rollout_r2": 0.8339979549985927,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9157771458324406,
+      "stage_mid_response_r_weighted": 0.8111534256430522,
+      "stage_late_response_r_weighted": 0.6784491450505833
+    },
+    {
+      "seed": 4,
+      "variant": "No gate",
+      "edge_auprc": 0.9568773676443664,
+      "dynamic_component_r": 0.8874844312667847,
+      "control_target_r2": 0.9636215723193428,
+      "late_horizon_reconstruction_r2": 0.9373442273245428,
+      "heldout_perturbation_r": 0.9060364961624146,
+      "heldout_response_trajectory_r": 0.7869933247566223,
+      "heldout_target_rollout_r2": 0.8751162846168099,
+      "heldout_sign_accuracy_effectful_targets": 0.95,
+      "stage_early_response_r_weighted": 0.8823800636945504,
+      "stage_mid_response_r_weighted": 0.9449059028865945,
+      "stage_late_response_r_weighted": 0.8345600446072864
+    },
+    {
+      "seed": 4,
+      "variant": "Fixed W",
+      "edge_auprc": 0.5700538478722956,
+      "dynamic_component_r": -7.450580596923828e-09,
+      "control_target_r2": 0.8172732479249438,
+      "late_horizon_reconstruction_r2": 0.7629357226562534,
+      "heldout_perturbation_r": -0.02534782513976097,
+      "heldout_response_trajectory_r": -0.0022281105630099773,
+      "heldout_target_rollout_r2": -0.7409569323340706,
+      "heldout_sign_accuracy_effectful_targets": 0.5666666666666667,
+      "stage_early_response_r_weighted": -0.04003950030023837,
+      "stage_mid_response_r_weighted": 0.029770608206069367,
+      "stage_late_response_r_weighted": 0.24563849108233685
+    },
+    {
+      "seed": 5,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9954933003178617,
+      "dynamic_component_r": 0.9686338901519775,
+      "control_target_r2": 0.9098017464116039,
+      "late_horizon_reconstruction_r2": 0.8376001314713656,
+      "heldout_perturbation_r": 0.9386535286903381,
+      "heldout_response_trajectory_r": 0.6565120220184326,
+      "heldout_target_rollout_r2": 0.8275235113857904,
+      "heldout_sign_accuracy_effectful_targets": 0.9583333333333334,
+      "stage_early_response_r_weighted": 0.9327475445721713,
+      "stage_mid_response_r_weighted": 0.8903520740879034,
+      "stage_late_response_r_weighted": 0.6039023287548315
+    },
+    {
+      "seed": 5,
+      "variant": "No delay",
+      "edge_auprc": 0.9992492492492493,
+      "dynamic_component_r": 0.9187465906143188,
+      "control_target_r2": 0.8908104428903438,
+      "late_horizon_reconstruction_r2": 0.78258376545943,
+      "heldout_perturbation_r": 0.9232751131057739,
+      "heldout_response_trajectory_r": 0.6541699171066284,
+      "heldout_target_rollout_r2": 0.8002752223657128,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9372104217391337,
+      "stage_mid_response_r_weighted": 0.7846633925124596,
+      "stage_late_response_r_weighted": 0.6374848618800207
+    },
+    {
+      "seed": 5,
+      "variant": "No gate",
+      "edge_auprc": 0.9870387442755864,
+      "dynamic_component_r": 0.8834884166717529,
+      "control_target_r2": 0.9100768884167406,
+      "late_horizon_reconstruction_r2": 0.8405496263659847,
+      "heldout_perturbation_r": 0.9205546975135803,
+      "heldout_response_trajectory_r": 0.643889844417572,
+      "heldout_target_rollout_r2": 0.8241663698977957,
+      "heldout_sign_accuracy_effectful_targets": 0.9583333333333334,
+      "stage_early_response_r_weighted": 0.9113261688136213,
+      "stage_mid_response_r_weighted": 0.8816547206568274,
+      "stage_late_response_r_weighted": 0.6123097987602982
+    },
+    {
+      "seed": 5,
+      "variant": "Fixed W",
+      "edge_auprc": 0.7056929803247861,
+      "dynamic_component_r": 3.725290298461914e-08,
+      "control_target_r2": 0.7663398174358119,
+      "late_horizon_reconstruction_r2": 0.5053279042540766,
+      "heldout_perturbation_r": 0.6638475060462952,
+      "heldout_response_trajectory_r": 0.44169923663139343,
+      "heldout_target_rollout_r2": 0.5959119541558358,
+      "heldout_sign_accuracy_effectful_targets": 0.9047619047619048,
+      "stage_early_response_r_weighted": 0.6812024084228356,
+      "stage_mid_response_r_weighted": 0.6644732236651661,
+      "stage_late_response_r_weighted": 0.4434433905108429
+    },
+    {
+      "seed": 6,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9532041750019422,
+      "dynamic_component_r": 0.9734704494476318,
+      "control_target_r2": 0.935930362216137,
+      "late_horizon_reconstruction_r2": 0.893257563128287,
+      "heldout_perturbation_r": 0.9161947965621948,
+      "heldout_response_trajectory_r": 0.7416861057281494,
+      "heldout_target_rollout_r2": 0.8211593529345174,
+      "heldout_sign_accuracy_effectful_targets": 0.9642857142857143,
+      "stage_early_response_r_weighted": 0.8835258643196888,
+      "stage_mid_response_r_weighted": 0.8784439637275518,
+      "stage_late_response_r_weighted": 0.7067448694669993
+    },
+    {
+      "seed": 6,
+      "variant": "No delay",
+      "edge_auprc": 0.8248417142661825,
+      "dynamic_component_r": 0.9394874572753906,
+      "control_target_r2": 0.9292892054608122,
+      "late_horizon_reconstruction_r2": 0.8745775823984411,
+      "heldout_perturbation_r": 0.9201493859291077,
+      "heldout_response_trajectory_r": 0.7373124957084656,
+      "heldout_target_rollout_r2": 0.7307186979583653,
+      "heldout_sign_accuracy_effectful_targets": 0.8854166666666666,
+      "stage_early_response_r_weighted": 0.8982439073018105,
+      "stage_mid_response_r_weighted": 0.8253318937307158,
+      "stage_late_response_r_weighted": 0.5862273657774025
+    },
+    {
+      "seed": 6,
+      "variant": "No gate",
+      "edge_auprc": 0.8786382223901494,
+      "dynamic_component_r": 0.8828556537628174,
+      "control_target_r2": 0.9330911306731022,
+      "late_horizon_reconstruction_r2": 0.887647035896604,
+      "heldout_perturbation_r": 0.8459998965263367,
+      "heldout_response_trajectory_r": 0.6805399656295776,
+      "heldout_target_rollout_r2": 0.7565712942264389,
+      "heldout_sign_accuracy_effectful_targets": 0.9642857142857143,
+      "stage_early_response_r_weighted": 0.8281784025140352,
+      "stage_mid_response_r_weighted": 0.8944920940753281,
+      "stage_late_response_r_weighted": 0.6695689400743506
+    },
+    {
+      "seed": 6,
+      "variant": "Fixed W",
+      "edge_auprc": 0.6774129471542896,
+      "dynamic_component_r": -3.725290298461914e-09,
+      "control_target_r2": 0.7274217372860834,
+      "late_horizon_reconstruction_r2": 0.6006617903459087,
+      "heldout_perturbation_r": 0.15535391867160797,
+      "heldout_response_trajectory_r": 0.12342618405818939,
+      "heldout_target_rollout_r2": -0.8440119642055846,
+      "heldout_sign_accuracy_effectful_targets": 0.7202380952380952,
+      "stage_early_response_r_weighted": 0.09114968534425139,
+      "stage_mid_response_r_weighted": 0.26566749475406104,
+      "stage_late_response_r_weighted": 0.3813076799815527
+    },
+    {
+      "seed": 7,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9138923316084733,
+      "dynamic_component_r": 0.9522237777709961,
+      "control_target_r2": 0.9440298737743358,
+      "late_horizon_reconstruction_r2": 0.8976573370256478,
+      "heldout_perturbation_r": 0.9276441335678101,
+      "heldout_response_trajectory_r": 0.7746040225028992,
+      "heldout_target_rollout_r2": 0.8446763825805794,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9223941836792346,
+      "stage_mid_response_r_weighted": 0.8915494024378172,
+      "stage_late_response_r_weighted": 0.7625367575202288
+    },
+    {
+      "seed": 7,
+      "variant": "No delay",
+      "edge_auprc": 0.7687077939477747,
+      "dynamic_component_r": 0.902794599533081,
+      "control_target_r2": 0.9343359461341966,
+      "late_horizon_reconstruction_r2": 0.8692878546570068,
+      "heldout_perturbation_r": 0.830228865146637,
+      "heldout_response_trajectory_r": 0.7035462260246277,
+      "heldout_target_rollout_r2": 0.6680501937781645,
+      "heldout_sign_accuracy_effectful_targets": 0.975,
+      "stage_early_response_r_weighted": 0.8690794713918079,
+      "stage_mid_response_r_weighted": 0.798953829012382,
+      "stage_late_response_r_weighted": 0.6269100698029763
+    },
+    {
+      "seed": 7,
+      "variant": "No gate",
+      "edge_auprc": 0.919145464921325,
+      "dynamic_component_r": 0.8755903840065002,
+      "control_target_r2": 0.94671163269228,
+      "late_horizon_reconstruction_r2": 0.9059188424092387,
+      "heldout_perturbation_r": 0.882336437702179,
+      "heldout_response_trajectory_r": 0.7387377023696899,
+      "heldout_target_rollout_r2": 0.8059777986992478,
+      "heldout_sign_accuracy_effectful_targets": 0.9714285714285715,
+      "stage_early_response_r_weighted": 0.8772273643209311,
+      "stage_mid_response_r_weighted": 0.913890210937391,
+      "stage_late_response_r_weighted": 0.8212244691008432
+    },
+    {
+      "seed": 7,
+      "variant": "Fixed W",
+      "edge_auprc": 0.6236464389209402,
+      "dynamic_component_r": 3.725290298461914e-09,
+      "control_target_r2": 0.6499044078718997,
+      "late_horizon_reconstruction_r2": 0.07403066437034023,
+      "heldout_perturbation_r": 0.3823998272418976,
+      "heldout_response_trajectory_r": 0.30610573291778564,
+      "heldout_target_rollout_r2": -0.3824617391538849,
+      "heldout_sign_accuracy_effectful_targets": 0.8964285714285716,
+      "stage_early_response_r_weighted": 0.42649258235667975,
+      "stage_mid_response_r_weighted": 0.5433973323796937,
+      "stage_late_response_r_weighted": 0.6340763028898938
+    },
+    {
+      "seed": 8,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9648513382264722,
+      "dynamic_component_r": 0.94415283203125,
+      "control_target_r2": 0.9455577988348677,
+      "late_horizon_reconstruction_r2": 0.9083557685561947,
+      "heldout_perturbation_r": 0.9332128763198853,
+      "heldout_response_trajectory_r": 0.7810481786727905,
+      "heldout_target_rollout_r2": 0.8568887962582751,
+      "heldout_sign_accuracy_effectful_targets": 0.875,
+      "stage_early_response_r_weighted": 0.8732611358916685,
+      "stage_mid_response_r_weighted": 0.8988654904392545,
+      "stage_late_response_r_weighted": 0.8176126437628874
+    },
+    {
+      "seed": 8,
+      "variant": "No delay",
+      "edge_auprc": 0.9412639243176226,
+      "dynamic_component_r": 0.8981301784515381,
+      "control_target_r2": 0.9343581181608929,
+      "late_horizon_reconstruction_r2": 0.8803135867030213,
+      "heldout_perturbation_r": 0.8945868611335754,
+      "heldout_response_trajectory_r": 0.7234979271888733,
+      "heldout_target_rollout_r2": 0.7904359196418944,
+      "heldout_sign_accuracy_effectful_targets": 0.9642857142857143,
+      "stage_early_response_r_weighted": 0.8864016618256289,
+      "stage_mid_response_r_weighted": 0.8530634770724889,
+      "stage_late_response_r_weighted": 0.6968608361750082
+    },
+    {
+      "seed": 8,
+      "variant": "No gate",
+      "edge_auprc": 0.9598510060354437,
+      "dynamic_component_r": 0.8680106997489929,
+      "control_target_r2": 0.9453770601672524,
+      "late_horizon_reconstruction_r2": 0.9080517924200509,
+      "heldout_perturbation_r": 0.8940297365188599,
+      "heldout_response_trajectory_r": 0.7460451126098633,
+      "heldout_target_rollout_r2": 0.8394419538192477,
+      "heldout_sign_accuracy_effectful_targets": 0.875,
+      "stage_early_response_r_weighted": 0.8456563906871212,
+      "stage_mid_response_r_weighted": 0.8861802445812303,
+      "stage_late_response_r_weighted": 0.7747874080032106
+    },
+    {
+      "seed": 8,
+      "variant": "Fixed W",
+      "edge_auprc": 0.7578314278340906,
+      "dynamic_component_r": -2.2351741790771484e-08,
+      "control_target_r2": 0.8018578094459342,
+      "late_horizon_reconstruction_r2": 0.7138306542212902,
+      "heldout_perturbation_r": 0.4357258081436157,
+      "heldout_response_trajectory_r": 0.3462042510509491,
+      "heldout_target_rollout_r2": 0.2070295610928815,
+      "heldout_sign_accuracy_effectful_targets": 0.7410714285714286,
+      "stage_early_response_r_weighted": 0.6320583816051626,
+      "stage_mid_response_r_weighted": 0.8286708228656922,
+      "stage_late_response_r_weighted": 0.6447533287563982
+    },
+    {
+      "seed": 9,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9303660582380217,
+      "dynamic_component_r": 0.9538958072662354,
+      "control_target_r2": 0.9387194380866407,
+      "late_horizon_reconstruction_r2": 0.8873679062616654,
+      "heldout_perturbation_r": 0.9576155543327332,
+      "heldout_response_trajectory_r": 0.7471485733985901,
+      "heldout_target_rollout_r2": 0.8667442850679478,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9261999315469944,
+      "stage_mid_response_r_weighted": 0.8829013534546859,
+      "stage_late_response_r_weighted": 0.7325420960204011
+    },
+    {
+      "seed": 9,
+      "variant": "No delay",
+      "edge_auprc": 0.788158603313414,
+      "dynamic_component_r": 0.8889613151550293,
+      "control_target_r2": 0.9307884980604961,
+      "late_horizon_reconstruction_r2": 0.8671836099067889,
+      "heldout_perturbation_r": 0.916447103023529,
+      "heldout_response_trajectory_r": 0.7034972906112671,
+      "heldout_target_rollout_r2": 0.7909864105909695,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.901035393298437,
+      "stage_mid_response_r_weighted": 0.8540445169811087,
+      "stage_late_response_r_weighted": 0.6120076859154485
+    },
+    {
+      "seed": 9,
+      "variant": "No gate",
+      "edge_auprc": 0.9332625343960537,
+      "dynamic_component_r": 0.8811072707176208,
+      "control_target_r2": 0.9365419032094358,
+      "late_horizon_reconstruction_r2": 0.8819375503618575,
+      "heldout_perturbation_r": 0.946710467338562,
+      "heldout_response_trajectory_r": 0.7389664053916931,
+      "heldout_target_rollout_r2": 0.8529829228343349,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9013263076645948,
+      "stage_mid_response_r_weighted": 0.8465614153604902,
+      "stage_late_response_r_weighted": 0.6895748733120594
+    },
+    {
+      "seed": 9,
+      "variant": "Fixed W",
+      "edge_auprc": 0.708005924921052,
+      "dynamic_component_r": 5.587935447692871e-09,
+      "control_target_r2": 0.7640957997055258,
+      "late_horizon_reconstruction_r2": 0.6087589046619266,
+      "heldout_perturbation_r": 0.693925678730011,
+      "heldout_response_trajectory_r": 0.5217867493629456,
+      "heldout_target_rollout_r2": 0.6246673941408287,
+      "heldout_sign_accuracy_effectful_targets": 0.9523809523809524,
+      "stage_early_response_r_weighted": 0.7362127630266282,
+      "stage_mid_response_r_weighted": 0.7116527106172845,
+      "stage_late_response_r_weighted": 0.6688952851748274
+    },
+    {
+      "seed": 10,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.8666618056115081,
+      "dynamic_component_r": 0.9452661275863647,
+      "control_target_r2": 0.9299440910971075,
+      "late_horizon_reconstruction_r2": 0.8900956544497204,
+      "heldout_perturbation_r": 0.913736879825592,
+      "heldout_response_trajectory_r": 0.6427385210990906,
+      "heldout_target_rollout_r2": 0.8508380522752288,
+      "heldout_sign_accuracy_effectful_targets": 0.875,
+      "stage_early_response_r_weighted": 0.9119406716131209,
+      "stage_mid_response_r_weighted": 0.8982032034634068,
+      "stage_late_response_r_weighted": 0.4818756863041022
+    },
+    {
+      "seed": 10,
+      "variant": "No delay",
+      "edge_auprc": 0.8883537092430053,
+      "dynamic_component_r": 0.8868503570556641,
+      "control_target_r2": 0.9237633131362858,
+      "late_horizon_reconstruction_r2": 0.8783119523058915,
+      "heldout_perturbation_r": 0.8861922025680542,
+      "heldout_response_trajectory_r": 0.6420605182647705,
+      "heldout_target_rollout_r2": 0.7837745327942812,
+      "heldout_sign_accuracy_effectful_targets": 0.75,
+      "stage_early_response_r_weighted": 0.8569863841843627,
+      "stage_mid_response_r_weighted": 0.7969711665218171,
+      "stage_late_response_r_weighted": 0.5413026107759872
+    },
+    {
+      "seed": 10,
+      "variant": "No gate",
+      "edge_auprc": 0.9485752657442333,
+      "dynamic_component_r": 0.8558171987533569,
+      "control_target_r2": 0.9295704699733881,
+      "late_horizon_reconstruction_r2": 0.8889830441207933,
+      "heldout_perturbation_r": 0.901948869228363,
+      "heldout_response_trajectory_r": 0.6344060897827148,
+      "heldout_target_rollout_r2": 0.845770005321814,
+      "heldout_sign_accuracy_effectful_targets": 0.875,
+      "stage_early_response_r_weighted": 0.9133213725510871,
+      "stage_mid_response_r_weighted": 0.881942460597668,
+      "stage_late_response_r_weighted": 0.45035846455444184
+    },
+    {
+      "seed": 10,
+      "variant": "Fixed W",
+      "edge_auprc": 0.7809704426373416,
+      "dynamic_component_r": -2.421438694000244e-08,
+      "control_target_r2": 0.8226925768724753,
+      "late_horizon_reconstruction_r2": 0.7287468579658567,
+      "heldout_perturbation_r": 0.6444798111915588,
+      "heldout_response_trajectory_r": 0.4203837811946869,
+      "heldout_target_rollout_r2": 0.5279946238067479,
+      "heldout_sign_accuracy_effectful_targets": 0.75,
+      "stage_early_response_r_weighted": 0.6911093163642754,
+      "stage_mid_response_r_weighted": 0.8549854487708153,
+      "stage_late_response_r_weighted": 0.5211930165409496
+    },
+    {
+      "seed": 11,
+      "variant": "ChronoGRN",
+      "edge_auprc": 1.0,
+      "dynamic_component_r": 0.977367639541626,
+      "control_target_r2": 0.9308866335754151,
+      "late_horizon_reconstruction_r2": 0.9007430078799243,
+      "heldout_perturbation_r": 0.9605571627616882,
+      "heldout_response_trajectory_r": 0.5942949652671814,
+      "heldout_target_rollout_r2": 0.871924578934155,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9155744186064516,
+      "stage_mid_response_r_weighted": 0.9503149320054125,
+      "stage_late_response_r_weighted": 0.7851685777194182
+    },
+    {
+      "seed": 11,
+      "variant": "No delay",
+      "edge_auprc": 0.9836662627232282,
+      "dynamic_component_r": 0.9461847543716431,
+      "control_target_r2": 0.8815801767731479,
+      "late_horizon_reconstruction_r2": 0.7811175098023213,
+      "heldout_perturbation_r": 0.8864593505859375,
+      "heldout_response_trajectory_r": 0.5516253113746643,
+      "heldout_target_rollout_r2": 0.8179834916991772,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.896545719147935,
+      "stage_mid_response_r_weighted": 0.8069427147081959,
+      "stage_late_response_r_weighted": 0.7027722181409117
+    },
+    {
+      "seed": 11,
+      "variant": "No gate",
+      "edge_auprc": 0.9927625751155162,
+      "dynamic_component_r": 0.9015325307846069,
+      "control_target_r2": 0.9299830788296877,
+      "late_horizon_reconstruction_r2": 0.8995081731311156,
+      "heldout_perturbation_r": 0.9397075772285461,
+      "heldout_response_trajectory_r": 0.5838071703910828,
+      "heldout_target_rollout_r2": 0.8681988329460745,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.8865140677713772,
+      "stage_mid_response_r_weighted": 0.9240775297767166,
+      "stage_late_response_r_weighted": 0.7508170817917705
+    },
+    {
+      "seed": 11,
+      "variant": "Fixed W",
+      "edge_auprc": 0.7302430129638896,
+      "dynamic_component_r": 9.313225746154785e-09,
+      "control_target_r2": 0.7792304686145873,
+      "late_horizon_reconstruction_r2": 0.6390830558150564,
+      "heldout_perturbation_r": 0.6408984065055847,
+      "heldout_response_trajectory_r": 0.3605814576148987,
+      "heldout_target_rollout_r2": 0.695410303739679,
+      "heldout_sign_accuracy_effectful_targets": 0.625,
+      "stage_early_response_r_weighted": 0.6453600791232996,
+      "stage_mid_response_r_weighted": 0.7388504510593382,
+      "stage_late_response_r_weighted": 0.5511102961363542
+    },
+    {
+      "seed": 12,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.8181746831785283,
+      "dynamic_component_r": 0.9562957882881165,
+      "control_target_r2": 0.9536628746883596,
+      "late_horizon_reconstruction_r2": 0.9131174487233311,
+      "heldout_perturbation_r": 0.9697721600532532,
+      "heldout_response_trajectory_r": 0.7790852785110474,
+      "heldout_target_rollout_r2": 0.9035939418227751,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9561616263397653,
+      "stage_mid_response_r_weighted": 0.9623290641622311,
+      "stage_late_response_r_weighted": 0.8564741324403575
+    },
+    {
+      "seed": 12,
+      "variant": "No delay",
+      "edge_auprc": 0.9289470060102072,
+      "dynamic_component_r": 0.9520632028579712,
+      "control_target_r2": 0.9487296450571557,
+      "late_horizon_reconstruction_r2": 0.8980048379276294,
+      "heldout_perturbation_r": 0.9310405850410461,
+      "heldout_response_trajectory_r": 0.7432478070259094,
+      "heldout_target_rollout_r2": 0.8636959101678475,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9485473520103452,
+      "stage_mid_response_r_weighted": 0.9161332334520862,
+      "stage_late_response_r_weighted": 0.7403091998271262
+    },
+    {
+      "seed": 12,
+      "variant": "No gate",
+      "edge_auprc": 0.9263403703337612,
+      "dynamic_component_r": 0.888590395450592,
+      "control_target_r2": 0.9536434049155312,
+      "late_horizon_reconstruction_r2": 0.9156531424038897,
+      "heldout_perturbation_r": 0.959815502166748,
+      "heldout_response_trajectory_r": 0.7657172083854675,
+      "heldout_target_rollout_r2": 0.8980705276813474,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9397841180009445,
+      "stage_mid_response_r_weighted": 0.959469752465955,
+      "stage_late_response_r_weighted": 0.8731542358702143
+    },
+    {
+      "seed": 12,
+      "variant": "Fixed W",
+      "edge_auprc": 0.7651799616527188,
+      "dynamic_component_r": -1.1175870895385742e-08,
+      "control_target_r2": -0.1256705685672912,
+      "late_horizon_reconstruction_r2": -1.8823451647754772,
+      "heldout_perturbation_r": 0.39825135469436646,
+      "heldout_response_trajectory_r": 0.2890489995479584,
+      "heldout_target_rollout_r2": 0.47897357289918085,
+      "heldout_sign_accuracy_effectful_targets": 0.95,
+      "stage_early_response_r_weighted": 0.432821858828828,
+      "stage_mid_response_r_weighted": 0.39994138488398173,
+      "stage_late_response_r_weighted": 0.05592832022263838
+    },
+    {
+      "seed": 13,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.8381276480223674,
+      "dynamic_component_r": 0.9094708561897278,
+      "control_target_r2": 0.9085174224696968,
+      "late_horizon_reconstruction_r2": 0.8603783731405892,
+      "heldout_perturbation_r": 0.9205716252326965,
+      "heldout_response_trajectory_r": 0.6599965691566467,
+      "heldout_target_rollout_r2": 0.7986657467560738,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.8799860991701354,
+      "stage_mid_response_r_weighted": 0.9084734621985484,
+      "stage_late_response_r_weighted": 0.607749853912417
+    },
+    {
+      "seed": 13,
+      "variant": "No delay",
+      "edge_auprc": 0.8518825075609979,
+      "dynamic_component_r": 0.8553860783576965,
+      "control_target_r2": 0.9044844364659115,
+      "late_horizon_reconstruction_r2": 0.8518852899104266,
+      "heldout_perturbation_r": 0.8770365715026855,
+      "heldout_response_trajectory_r": 0.6209061741828918,
+      "heldout_target_rollout_r2": 0.7130681386594773,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.8904328996450339,
+      "stage_mid_response_r_weighted": 0.7826887286704205,
+      "stage_late_response_r_weighted": 0.4684309164982494
+    },
+    {
+      "seed": 13,
+      "variant": "No gate",
+      "edge_auprc": 0.9118131488442123,
+      "dynamic_component_r": 0.9019112586975098,
+      "control_target_r2": 0.909043384094421,
+      "late_horizon_reconstruction_r2": 0.8613021236983036,
+      "heldout_perturbation_r": 0.9284483790397644,
+      "heldout_response_trajectory_r": 0.6673492193222046,
+      "heldout_target_rollout_r2": 0.8002843518613554,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.8868929505006115,
+      "stage_mid_response_r_weighted": 0.9058150725077952,
+      "stage_late_response_r_weighted": 0.6073367833234493
+    },
+    {
+      "seed": 13,
+      "variant": "Fixed W",
+      "edge_auprc": 0.6297543179515634,
+      "dynamic_component_r": -5.21540641784668e-08,
+      "control_target_r2": 0.7825742025508746,
+      "late_horizon_reconstruction_r2": 0.7063906554605399,
+      "heldout_perturbation_r": 0.5186053514480591,
+      "heldout_response_trajectory_r": 0.3648119270801544,
+      "heldout_target_rollout_r2": 0.3452133864035781,
+      "heldout_sign_accuracy_effectful_targets": 0.6875,
+      "stage_early_response_r_weighted": 0.5703855853023984,
+      "stage_mid_response_r_weighted": 0.49894576422000625,
+      "stage_late_response_r_weighted": 0.3058477604784569
+    },
+    {
+      "seed": 14,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.960844527766916,
+      "dynamic_component_r": 0.9752682447433472,
+      "control_target_r2": 0.951135319388929,
+      "late_horizon_reconstruction_r2": 0.907566286709365,
+      "heldout_perturbation_r": 0.9766027927398682,
+      "heldout_response_trajectory_r": 0.7349972128868103,
+      "heldout_target_rollout_r2": 0.9064878865209004,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9652716035698028,
+      "stage_mid_response_r_weighted": 0.9221869592273408,
+      "stage_late_response_r_weighted": 0.7587806623661842
+    },
+    {
+      "seed": 14,
+      "variant": "No delay",
+      "edge_auprc": 0.9594987381378675,
+      "dynamic_component_r": 0.9481267333030701,
+      "control_target_r2": 0.9356301621776852,
+      "late_horizon_reconstruction_r2": 0.8528034118734582,
+      "heldout_perturbation_r": 0.8794405460357666,
+      "heldout_response_trajectory_r": 0.6597921848297119,
+      "heldout_target_rollout_r2": 0.8537649940280923,
+      "heldout_sign_accuracy_effectful_targets": 0.75,
+      "stage_early_response_r_weighted": 0.841560710048563,
+      "stage_mid_response_r_weighted": 0.7749994147467821,
+      "stage_late_response_r_weighted": 0.5312307502900973
+    },
+    {
+      "seed": 14,
+      "variant": "No gate",
+      "edge_auprc": 0.9886485272514685,
+      "dynamic_component_r": 0.9094365835189819,
+      "control_target_r2": 0.9500942108382944,
+      "late_horizon_reconstruction_r2": 0.9060972262369802,
+      "heldout_perturbation_r": 0.963653028011322,
+      "heldout_response_trajectory_r": 0.7239264249801636,
+      "heldout_target_rollout_r2": 0.9024277056618495,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.9403596309955033,
+      "stage_mid_response_r_weighted": 0.9013367420266125,
+      "stage_late_response_r_weighted": 0.7671912733877821
+    },
+    {
+      "seed": 14,
+      "variant": "Fixed W",
+      "edge_auprc": 0.6825989145289075,
+      "dynamic_component_r": -2.9802322387695312e-08,
+      "control_target_r2": 0.7736374129631134,
+      "late_horizon_reconstruction_r2": 0.5522535604065139,
+      "heldout_perturbation_r": 0.3618214726448059,
+      "heldout_response_trajectory_r": 0.26737862825393677,
+      "heldout_target_rollout_r2": 0.5398829021025842,
+      "heldout_sign_accuracy_effectful_targets": 0.7678571428571429,
+      "stage_early_response_r_weighted": 0.5300095623253275,
+      "stage_mid_response_r_weighted": 0.6120779056343428,
+      "stage_late_response_r_weighted": 0.48162881456370044
+    },
+    {
+      "seed": 15,
+      "variant": "ChronoGRN",
+      "edge_auprc": 0.9964506172839507,
+      "dynamic_component_r": 0.9517958164215088,
+      "control_target_r2": 0.9319752877154444,
+      "late_horizon_reconstruction_r2": 0.882902217251863,
+      "heldout_perturbation_r": 0.8987014293670654,
+      "heldout_response_trajectory_r": 0.4824792444705963,
+      "heldout_target_rollout_r2": 0.857554888492108,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.8884304255406473,
+      "stage_mid_response_r_weighted": 0.8155850680292642,
+      "stage_late_response_r_weighted": 0.692013875525226
+    },
+    {
+      "seed": 15,
+      "variant": "No delay",
+      "edge_auprc": 0.8608808562195305,
+      "dynamic_component_r": 0.8321667909622192,
+      "control_target_r2": 0.9271577915987573,
+      "late_horizon_reconstruction_r2": 0.8697866646628064,
+      "heldout_perturbation_r": 0.82399982213974,
+      "heldout_response_trajectory_r": 0.42753419280052185,
+      "heldout_target_rollout_r2": 0.8049256688464428,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.8840515103544057,
+      "stage_mid_response_r_weighted": 0.8028610787384188,
+      "stage_late_response_r_weighted": 0.5706902160793412
+    },
+    {
+      "seed": 15,
+      "variant": "No gate",
+      "edge_auprc": 0.982433337632465,
+      "dynamic_component_r": 0.8701667189598083,
+      "control_target_r2": 0.9322243424035231,
+      "late_horizon_reconstruction_r2": 0.8842270678838959,
+      "heldout_perturbation_r": 0.8665010333061218,
+      "heldout_response_trajectory_r": 0.4651326537132263,
+      "heldout_target_rollout_r2": 0.8530301016530513,
+      "heldout_sign_accuracy_effectful_targets": 1.0,
+      "stage_early_response_r_weighted": 0.8563676847451418,
+      "stage_mid_response_r_weighted": 0.7843595946838049,
+      "stage_late_response_r_weighted": 0.6526782490538354
+    },
+    {
+      "seed": 15,
+      "variant": "Fixed W",
+      "edge_auprc": 0.7292543781149232,
+      "dynamic_component_r": -1.210719347000122e-08,
+      "control_target_r2": 0.859288007951028,
+      "late_horizon_reconstruction_r2": 0.7323141049316036,
+      "heldout_perturbation_r": 0.17693299055099487,
+      "heldout_response_trajectory_r": 0.10159412026405334,
+      "heldout_target_rollout_r2": 0.6400378533035096,
+      "heldout_sign_accuracy_effectful_targets": 0.9333333333333332,
+      "stage_early_response_r_weighted": 0.32239606559806605,
+      "stage_mid_response_r_weighted": 0.24538183132564054,
+      "stage_late_response_r_weighted": 0.1742996749096928
+    }
+  ]
+}
